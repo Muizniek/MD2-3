@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./CSSreset.css">
+    <link rel="icon" href="/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="/styles.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <form id="my-form" class="light-mode">
+            <h2 class="form--h2">Checkout</h2>
+            <div class="Your--order--delivery--details">
+                <div class="Your--order">
+                    <h3 class="all--headings">Your Order</h3>
+                    <p class="box--heding--01">Eggshell Plant Pot</p>
+                    <p class="txt--01">Size: Medium</p>
+                    <p class="txt--01">Qty: 1</p>
+                    <p class="txt--01">$25.00</p>
+                </div>
+                <div class="delivery--details">
+                    <h3 class="all--headings">Delivery Details</h3>
+                    <div class="delivery--detalis--box-wraper">
+                        <div class="left--box">
+                            <p class="box--heding">Adam Sandler</p>
+                            <p class="txt--1">1234 Fake St</p>
+                            <p class="txt--1">Milwaukee, WI 53203</p>
+                        </div>
+                        <div class="right--box">
+                            <p class="box--heding">Shipping Speed</p>
+                            <p class="txt--1">$7.00 No Rush Shipping</p>
+                            <p class="txt--1">Arrives by 1/16/22</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="payment--method">
+                <h3 class="all--headings">Payment Method</h3>
+                <div class="thre--input--labels">
+                    <div class="form-group">
+                        <label for="name">Input Label</label>
+                        <input type="text" class="name-light" name="name" required placeholder="Placeholder Text" style="width: 309px;">
+                    </div>
+                    <div class="form-group">
+                        <label for="name">Input Label</label>
+                        <input type="text" class="name-light" name="name" required placeholder="Placeholder Text">
+                    </div>
+                    <div class="form-group">
+                        <label for="name">Input Label</label>
+                        <input type="text" class="name-light" name="name" required placeholder="Placeholder Text">
+                    </div>
+                </div>
+            </div>
+            <div class="button--switch--wraper">
+                <button class="button" type="submit">Continue</button>
+                <div class="switch-container">
+                            <label for="mode-switch" class="switch-label">Switch Dark Mode:</label>
+                            <label class="switch">
+                                <input type="checkbox" id="mode-switch">
+                                <span class="slider round"></span>
+                            </label>
+                </div>
+            </div>
+        </form>
+    </div>
+
+
+
+
+
+    <script>
+        const modeSwitch = document.getElementById('mode-switch');
+const form = document.getElementById('my-form');
+
+modeSwitch.addEventListener('change', () => {
+  if (modeSwitch.checked) {
+    form.classList.remove('light-mode');
+    form.classList.add('dark-mode');
+    document.body.style.backgroundColor = '#130F1C'; // Set the background color to black
+  } else {
+    form.classList.remove('dark-mode');
+    form.classList.add('light-mode');
+    document.body.style.backgroundColor = 'white'; // Set the background color to white (or any desired color)
+  }
+});
+    </script>
+</body>
+</html>
